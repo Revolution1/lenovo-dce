@@ -1,7 +1,7 @@
 appearance:
   square_logo: "/ui/assets/images/lenovo-square.png"
   rectangle_logo: "/ui/assets/images/login_lenovo.svg"
-  favicon: "/ui/assets/images/lenovo-favicon.png"
+  favicon: "/ui/assets/images/favicon.png"
   production_name: "Lenovo DCE"
   show_powered_by: true
   

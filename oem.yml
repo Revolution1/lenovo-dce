@@ -1,0 +1,6 @@
+appearance:
+  square_logo: "/ui/lenovo-square.png"
+  rectangle_logo: "/ui/login_lenovo.svg"
+  favicon: "/ui/lenovo-favicon.png"
+  production_name: "Lenovo DCE"
+  show_powered_by: true

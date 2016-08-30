@@ -12,21 +12,19 @@ LB="daocloud.io/daocloud/dce-lb:$DCE_VER"
 
 IMAGES="$CONTROLLER $COMPOSE $SWARM $AGENT $ETCD $DCE $LB"
 
-
+echo  -e "\033[32m Pulling images... \033[0m"
 for i in $(echo $IMAGES|sed 's/ /\n/g')
 do 
 	docker pull $i
 done
 
-
-
 echo  -e "\033[32m Build... \033[0m"
 OLD_ID=$(docker images -q $CONTROLLER)
-docker build --pull -f -t $CONTROLLER ./Dockerfile
+docker build --pull -t $CONTROLLER -f ./Dockerfile
 
 echo  -e "\033[32m Pack... \033[0m"
 NEW_ID=$(docker images -q $CONTROLLER)
-docker save $IMAGES | gzip > dce:$DCE_VER.tar.gz
+docker save $IMAGES | gzip > dce$DCE_VER.tar.gz
 
 
 echo  -e "\033[32m Clean up... \033[0m"

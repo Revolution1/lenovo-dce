@@ -21,7 +21,7 @@ done
 echo  -e "\033[32m Building... \033[0m"
 OLD_ID=$(docker images -q $CONTROLLER)
 docker tag $OLD_ID "daocloud.io/daocloud/dce-controller:bak"
-docker build --pull -t $CONTROLLER -f ./Dockerfile
+docker build -t $CONTROLLER .
 
 echo  -e "\033[32m Packing... \033[0m"
 NEW_ID=$(docker images -q $CONTROLLER)

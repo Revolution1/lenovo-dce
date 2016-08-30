@@ -25,7 +25,7 @@ docker build -t $CONTROLLER .
 
 echo  -e "\033[32m Packing... \033[0m"
 NEW_ID=$(docker images -q $CONTROLLER)
-docker save $IMAGES | gzip > dce-$DCE_VER.tar.gz
+docker save $IMAGES | gzip > lenovo-dce-$DCE_VER.tar.gz
 
 
 echo  -e "\033[32m Clean up... \033[0m"

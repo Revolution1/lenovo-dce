@@ -20,13 +20,15 @@ done
 
 echo  -e "\033[32m Building... \033[0m"
 OLD_ID=$(docker images -q $CONTROLLER)
+docker tag $OLD_ID "daocloud.io/daocloud/dce-controller:bak"
 docker build --pull -t $CONTROLLER -f ./Dockerfile
 
 echo  -e "\033[32m Packing... \033[0m"
 NEW_ID=$(docker images -q $CONTROLLER)
-docker save $IMAGES | gzip > dce$DCE_VER.tar.gz
+docker save $IMAGES | gzip > dce-$DCE_VER.tar.gz
 
 
 echo  -e "\033[32m Clean up... \033[0m"
 docker rmi $NEW_ID
 docker tag $OLD_ID $CONTROLLER
+docker rmi "daocloud.io/daocloud/dce-controller:bak"

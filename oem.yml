@@ -1,6 +1,7 @@
 appearance:
-  square_logo: "/ui/lenovo-square.png"
-  rectangle_logo: "/ui/login_lenovo.svg"
-  favicon: "/ui/lenovo-favicon.png"
-  production_name: "Lenovo DCE"
+  square_logo: "/ui/assets/images/lenovo-square.png"
+  rectangle_logo: "/ui/assets/images/login_lenovo.svg"
+  favicon: "/ui/assets/images/favicon.png"
+  production_name: "联想容器管理平台"
   show_powered_by: true
+  

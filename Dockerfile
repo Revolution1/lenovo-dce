@@ -1,4 +1,4 @@
-FROM daocloud.io/daocloud/dce-controller:1.4.0
+FROM daocloud.io/daocloud/dce-controller:2.2.0
 
 # COPY images/* /usr/share/nginx/html/ui/assets/images/
 

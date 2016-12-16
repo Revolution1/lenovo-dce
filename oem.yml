@@ -3,5 +3,5 @@ appearance:
   rectangle_logo: "/ui/images/lenovo-login.svg"
   favicon: "/ui/images/lenovo-favicon.png"
   production_name: "联想应用云平台"
-  show_powered_by: true
+  show_powered_by: false
   

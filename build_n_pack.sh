@@ -3,14 +3,12 @@
 DCE_VER=2.2.0
 
 CONTROLLER="daocloud.io/daocloud/dce-controller:$DCE_VER"
-COMPOSE="daocloud.io/daocloud/dce-compose:$DCE_VER"
 SWARM="daocloud.io/daocloud/dce-swarm:$DCE_VER"
 AGENT="daocloud.io/daocloud/dce-agent:$DCE_VER"
 ETCD="daocloud.io/daocloud/dce-etcd:$DCE_VER"
 DCE="daocloud.io/daocloud/dce:$DCE_VER"
-LB="daocloud.io/daocloud/dce-lb:$DCE_VER"
 
-IMAGES="$CONTROLLER $COMPOSE $SWARM $AGENT $ETCD $DCE $LB"
+IMAGES="$CONTROLLER $SWARM $AGENT $ETCD $DCE"
 
 echo  -e "\033[32m Pulling images... \033[0m"
 for i in $(echo $IMAGES|sed 's/ /\n/g')

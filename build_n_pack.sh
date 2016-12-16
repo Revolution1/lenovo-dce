@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DCE_VER=1.4.0
+DCE_VER=2.2.0
 
 CONTROLLER="daocloud.io/daocloud/dce-controller:$DCE_VER"
 COMPOSE="daocloud.io/daocloud/dce-compose:$DCE_VER"

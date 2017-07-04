@@ -1,6 +1,7 @@
 #!/bin/bash
+set -x
 
-DCE_VER=2.2.0
+DCE_VER=2.6.0
 
 CONTROLLER="daocloud.io/daocloud/dce-controller:$DCE_VER"
 SWARM="daocloud.io/daocloud/dce-swarm:$DCE_VER"
@@ -11,7 +12,7 @@ DCE="daocloud.io/daocloud/dce:$DCE_VER"
 IMAGES="$CONTROLLER $SWARM $AGENT $ETCD $DCE"
 
 echo  -e "\033[32m Pulling images... \033[0m"
-for i in $(echo $IMAGES|sed 's/ /\n/g')
+for i in $IMAGES
 do 
 	docker pull $i
 done

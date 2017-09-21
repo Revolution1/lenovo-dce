@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 
-DCE_VER=2.6.0
+DCE_VER=2.6.1
 
 CONTROLLER="daocloud.io/daocloud/dce-controller:$DCE_VER"
 SWARM="daocloud.io/daocloud/dce-swarm:$DCE_VER"
